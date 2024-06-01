@@ -5,9 +5,56 @@
     --seeds: #420200;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: var(--bg);
 }
+
+nav {
+    position: fixed;
+    background-attachment: fixed;
+    width: 100%;
+    background-color: #f3f3f3;
+    padding: 10px;
+    border: 1px solid #e7e7e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    border-radius: 5px;
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color: #02462d;
+}
+
 
 .watermellon {
     position: absolute;
@@ -58,48 +105,55 @@ body {
     background-color: var(--seeds);
 }
 
-.seed1{
+.seed1 {
     position: absolute;
     top: 45%;
     left: 40%;
 }
-.seed2{
+
+.seed2 {
     position: absolute;
     top: 50%;
     left: 50%;
 }
-.seed3{
+
+.seed3 {
     position: absolute;
     top: 45%;
     left: 45%;
 }
-.seed4{
+
+.seed4 {
     position: absolute;
     top: 60%;
     left: 60%;
 }
-.seed5{
+
+.seed5 {
     position: absolute;
     top: 40%;
     left: 45%;
 }
-.seed6{
+
+.seed6 {
     position: absolute;
     top: 40%;
     left: 40%;
 }
-.seed7{
+
+.seed7 {
     position: absolute;
     top: 52%;
     left: 45%;
 }
-.seed8{
+
+.seed8 {
     position: absolute;
     top: 55%;
     left: 55%;
 }
 
-.cut-2{
+.cut-2 {
     position: absolute;
     height: 100px;
     width: 200px;
@@ -110,7 +164,8 @@ body {
     background-color: var(--green);
     animation: slice 5s ease-in-out infinite;
 }
-.cut-2::after{
+
+.cut-2::after {
     content: '';
     position: absolute;
     height: 100%;
@@ -122,13 +177,14 @@ body {
 }
 
 @keyframes slice {
-    from{
+    from {
         left: 30%;
-    top: 40%;
+        top: 40%;
     }
-    to{
-        left: 45% ;
-        top:50%;
+
+    to {
+        left: 45%;
+        top: 50%;
 
     }
 }
